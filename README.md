@@ -765,6 +765,10 @@ So to maintain a well-ordered info I built a key depending on the hours range (i
 
 ## Changelog
 
+v0.2.0
+- Change package name
+- Update to cmfcmf\OpenWeatherMap v3;
+
 v0.1.2
 - Support for getDailyWeatherForecast
 
@@ -774,6 +778,7 @@ v0.1.1
 - Additional README documentation
 
 Thanks to: 
+- [@gitllermopalafox](https://github.com/gitllermopalafox)
 - [@nateritter](https://github.com/nateritter)
 - [@jmaurer1994](https://github.com/jmaurer1994)
 
