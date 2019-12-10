@@ -15,6 +15,18 @@ class LaravelOWM
      */
     protected $api_key;
 
+    /**
+     * Classname of the http client
+     * @var string
+     */
+    protected $httpClient;
+
+    /**
+     * Classname of the httpRequestFactory
+     * @var string
+     */
+    protected $httpRequestFactory;
+
     public function __construct()
     {
         $this->config = config('laravel-owm');
@@ -28,6 +40,8 @@ class LaravelOWM
         }
 
         $this->api_key = $this->config['api_key'];
+        $this->httpClient =  new $this->config['httpClient']();
+        $this->httpRequestFactory = new $this->config['httpRequestFactory']();
     }
 
     /**
@@ -55,11 +69,11 @@ class LaravelOWM
         $units = $units ?: 'metric';
 
         if ($cache) {
-            $owm = new OpenWeatherMap($this->api_key, null, new Cache(), $time);
+            $owm = new OpenWeatherMap($this->api_key, $this->httpClient, $this->httpRequestFactory, new Cache(), $time);
             return $owm->getWeather($query, $units, $lang);
         }
 
-        $owm = new OpenWeatherMap($this->api_key);
+        $owm = new OpenWeatherMap($this->api_key, $this->httpClient, $this->httpRequestFactory);
         return $owm->getWeather($query, $units, $lang);
     }
 

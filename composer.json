@@ -4,7 +4,7 @@
     "keywords": ["weather","clima","open weather map","laravel"],
     "require": {
         "php": ">=5.4.0",
-        "cmfcmf/openweathermap-php-api": "^2.1"
+        "cmfcmf/openweathermap-php-api": "^3.0"
     },
   
     "license": "MIT",

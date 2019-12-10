@@ -6,6 +6,10 @@
 
 `composer require hennell/laravel-owm`
 
+You will also need a PSR-17 compatible HTTP factory implementation and a PSR-18 compatible HTTP client implementation. For the default setup you can use:
+`composer require http-interop/http-factory-guzzle ^1.0`
+`composer require php-http/guzzle6-adapter ^2.0 `
+
 #### 2. Add this line to your conf/app.php file
 
 For Laravel >= 5.5.* will use the auto-discovery function so you can ignore this step.
@@ -32,6 +36,16 @@ For Laravel == 5.0.*
    ...
        'api_key' => '',            // visit: http://openweathermap.org/appid#get for more info.
        'routes_enabled' => true,   // If the routes have to be enabled.
+   ...
+```
+#### 5. Add the Http Factory and Client
+
+Add fully qualified string names of your httpClient and httpRequest implementation. If you install the packages suggested above you can leave them as the defaults below:
+
+```
+   ...
+      'httpClient' => 'Http\Adapter\Guzzle6\Client',
+      'httpRequestFactory' => 'Http\Factory\Guzzle\RequestFactory',
    ...
 ```
 
