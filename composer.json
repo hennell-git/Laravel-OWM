@@ -1,5 +1,5 @@
 {
-    "name": "gmopx/laravel-owm",
+    "name": "hennell/laravel-owm",
     "description": "Wrapper for cmfcmf/openweathermap-php-api",
     "keywords": ["weather","clima","open weather map","laravel"],
     "require": {
@@ -11,22 +11,22 @@
 
     "authors": [
         {
-            "name": "Guillermo Palafox",
-            "email": "palafox.87@gmail.com"
+            "name": "Paul Hennell",
+            "email": "null@hennell.dev"
         }
     ],
     "minimum-stability": "dev",
 
     "autoload": {
         "psr-4": {
-            "Gmopx\\LaravelOWM\\": "src/"
+            "hennell\\LaravelOWM\\": "src/"
         }
     },
 
     "extra": {
         "laravel": {
             "providers": [
-                "Gmopx\\LaravelOWM\\LaravelOWMServiceProvider"
+                "hennell\\LaravelOWM\\LaravelOWMServiceProvider"
             ]
         }
     }

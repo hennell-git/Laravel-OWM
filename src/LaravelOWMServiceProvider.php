@@ -1,5 +1,5 @@
 <?php
-namespace Gmopx\LaravelOWM;
+namespace hennell\LaravelOWM;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -38,9 +38,9 @@ class LaravelOWMServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('Gmopx\LaravelOWM\LaravelOWM', function(){
+		$this->app->bind('hennell\LaravelOWM\LaravelOWM', function(){
 
-			return new \Gmopx\LaravelOWM\LaravelOWM();
+			return new \hennell\LaravelOWM\LaravelOWM();
 
 		});
 	}
