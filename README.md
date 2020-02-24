@@ -4,7 +4,7 @@
 
 #### 1. Installation
 
-`composer require gmopx/laravel-owm`
+`composer require coliving/laravel-owm`
 
 #### 2. Add this line to your conf/app.php file
 
@@ -761,7 +761,7 @@ v0.1.1
 - Added getWeatherHistory method
 - Additional README documentation
 
-Thanks to: 
+Thanks to:
 - [@nateritter](https://github.com/nateritter)
 - [@jmaurer1994](https://github.com/jmaurer1994)
 
